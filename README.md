@@ -18,5 +18,5 @@ Running the Program
 1. Install all requirements
 2. Run in terminal 'python main.py'
 
-#Project Documentation
+# Project Documentation
 Written by:
