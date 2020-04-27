@@ -1,7 +1,7 @@
 # Project AI: ASHI&DAVID
 Project for CPE106L - B3
 
-Project Members  
+**Project Members**  
   1.  
   2.  
   3.  
@@ -9,12 +9,12 @@ Project Members
   5.  
   6.  
 
-Requirements  
+**Requirements**  
 •Python 3.7  
 •MySQL  
 •Google Calendar Api  
 
-Running the Program
+*Running the Program**  
 1. Install all requirements
 2. Run in terminal 'python main.py'
 
