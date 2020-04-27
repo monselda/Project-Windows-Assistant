@@ -2,12 +2,12 @@
 Project for CPE106L - B3
 
 Project Members
-1.
-2.
-3.
-4.
-5.
-6.
+  1.
+  2.
+  3.
+  4.
+  5.
+  6.
 
 Requirements
 •Python 3.7
@@ -20,3 +20,5 @@ Running the Program
 
 # Project Documentation
 Written by:
+
+# Introduction
