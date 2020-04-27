@@ -14,7 +14,7 @@ Project for CPE106L - B3
 •MySQL  
 •Google Calendar Api  
 
-*Running the Program**  
+**Running the Program**  
 1. Install all requirements
 2. Run in terminal 'python main.py'
 
@@ -22,3 +22,39 @@ Project for CPE106L - B3
 Written by:
 
 # Introduction
+
+Purpose
+•
+
+Scope
+
+Definitions, Acronyms, and Abbreviations
+•
+
+Reference
+
+Overview
+
+# Use Cases
+
+Actors
+
+List of Use Case
+
+Use Case Diagram
+
+Use Cases
+
+# Design Overview
+
+Introduction
+
+System Architecture
+
+System Interfaces
+
+Constraints and Assumptions
+
+# System Object Model
+
+
