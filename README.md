@@ -9,10 +9,10 @@ Project Members
   5.  
   6.  
 
-Requirements
-•Python 3.7
-•MySQL
-•Google Calendar Api
+Requirements  
+•Python 3.7  
+•MySQL  
+•Google Calendar Api  
 
 Running the Program
 1. Install all requirements
