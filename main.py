@@ -43,6 +43,21 @@ def greet():
         say("good evening")
 
 
+#function to paste and read something in notepad
+def notepad():
+    if "paste in notepad" in said:
+        say("i am ready")
+        text = get_audio()
+        file = open(r"C:/Users/Computer-1\Documents/3rd Term - SY 2019-2020/CPE106L_B3/FINAL PROJECT/FP_2/notes/note.txt", "w+") 
+        file.write(text)
+        file.close()
+    
+    if "show text" in said:
+        say("opening notepad")
+        os.startfile('C:/Users/Computer-1\Documents/3rd Term - SY 2019-2020/CPE106L_B3/FINAL PROJECT/FP_2/notes/note.txt')
+        with open("C:/Users/Computer-1\Documents/3rd Term - SY 2019-2020/CPE106L_B3/FINAL PROJECT/FP_2/notes/note.txt","r") as f:
+            data = f.readlines()
+            say(str(data))        
 
 #main function that contains the commands of other functions
 def main():
@@ -65,3 +80,5 @@ if __name__ == "__main__":
                     break
                 else:
                     main()
+
+                    
