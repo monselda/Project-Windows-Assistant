@@ -22,11 +22,12 @@ Project for CPE106L - B3
 Written by:
 
 # Introduction
-
-Purpose
-• To help organize calendar dates for ocassions    
+  With the advancements and breakthroughs made in technology in the current generation, AI or Artificial Intelligence is widely being utilized to aid humans in further towards improving the lives of individuals through technology. Creating a machine with AI nowadays have several purposes, some AIs are industrial purposes like creating machines with the aid of AIs to make it adapt to certain environments, an example of this is Curiosity - the rover that was sent to Mars to explore the crater Gale. Next, some are utilized for human services, like  . For this project the group of students have created a simple AI that can help users with some basic necessities while using their pesonal computers.  
+  
+# Purpose  
+• To help organize calendar reminders    
 • To aid opening and managing applications in the computer  
-•
+• 
 
 Scope
 
