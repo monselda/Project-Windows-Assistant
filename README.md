@@ -24,6 +24,8 @@ Written by:
 # Introduction
 
 Purpose
+• To help organize calendar dates for ocassions    
+• To aid opening and managing applications in the computer  
 •
 
 Scope
