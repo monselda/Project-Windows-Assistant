@@ -29,29 +29,29 @@ Written by:
 • To aid opening and managing applications in the computer  
 • 
 
-Scope
+**Scope**
   
   • For the creation of the application: The project only includes VsCode, python interpreter, anaconda, MySQL  
   • For the user: This software can be used by all for their personal use. It can only be utilized with its functions within the computer. It also does not gather the user's personal information.  
   
-Definitions, Acronyms, and Abbreviations  
+**Definitions, Acronyms, and Abbreviations**  
 •Google Calendar API  
 •Wolfram Alpha  
 •Open Weather API  
 
-Reference
+**Reference**  
+  
+**Overview**  
+  
+# Use Cases #  
 
-Overview
+Actors  
 
-# Use Cases
+List of Use Case  
 
-Actors
+Use Case Diagram  
 
-List of Use Case
-
-Use Case Diagram
-
-Use Cases
+Use Cases  
 
 # Design Overview
 
