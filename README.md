@@ -10,9 +10,11 @@ Project for CPE106L - B3
   6.  
 
 **Requirements**  
-•Python 3.7  
-•MySQL  
-•Google Calendar Api  
+• Python 3.7  
+• MySQL  
+• Google Calendar Api  
+• WolframAlpha API  
+• OpenWeather API
 
 **Running the Program**  
 1. Install all requirements
@@ -27,7 +29,11 @@ Written by:
 # Purpose  
 • To help organize calendar reminders    
 • To aid opening and managing applications in the computer  
-• 
+• To give access to computer's miscellaneous just by speaking or writing
+• Gain access on wolfram 
+• Check weather on different places based on the user's query
+• search something on the internet like google and youtube
+• Allows the user to add and get data from database
 
 **Scope**
   
@@ -35,9 +41,9 @@ Written by:
   • For the user: This software can be used by all for their personal use. It can only be utilized with its functions within the computer. It also does not gather the user's personal information.  
   
 **Definitions, Acronyms, and Abbreviations**  
-•Google Calendar API  
-•Wolfram Alpha  
-•Open Weather API  
+• **Google Calendar API** - This API allows you to sync and get data from your google calendar.  
+• **Wolfram Alpha**  - This API returns an answer based on the query of the user. You can get answer based on these topics (Math, Science, Social, Culture, and Everyday Life).  
+• **Open Weather API** - This API gives you access to their weather monitoring system.  
 
 **Reference**  
   
