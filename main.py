@@ -31,6 +31,7 @@ def get_audio():
         print("Sorry, I did not get that.")
     return query.lower()
 
+
 #function for greeting the user once the program starts
 def greet():
     hour = int(datetime.datetime.now().hour)
@@ -59,6 +60,7 @@ def notepad():
             data = f.readlines()
             say(str(data))        
 
+            
 #main function that contains the commands of other functions
 def main():
     pass
