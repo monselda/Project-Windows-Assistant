@@ -1,6 +1,7 @@
 import datetime
 import os
 import time
+import webbrowser
 import pyttsx3  #pip install pyttsx3==2.71
 import speech_recognition as sr
 import mysql.connector
@@ -18,6 +19,11 @@ mydb = mysql.connector.connect(
 	# Important!!!
     )
 mycursor = mydb.cursor(buffered=True)
+
+
+#brave path
+brave_path = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/Brave.exe %s --incognito'
+brave_path_normal = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/Brave.exe %s'
 
 
 #setting text to speech engine and voice rate property
@@ -119,7 +125,56 @@ def get_db_result(said):
         mydb.close
 
 
+#function to shutdown and restart computer
+def snr(said):
+    if "shutdown computer" in said:
+        say("computer will shutdown in 60 seconds")
+        os.system("shutdown /s /t 60")
 
+    if "restart computer" in said:
+        say("computer will restart in 60 seconds")
+        os.system("shutdown /r /t 60")
+
+    if "cancel" in said:
+        say("scheduled shutdown or restart has been cancelled")
+        os.system("shutdown /a")
+
+
+#function to ask AI
+def do_commands(said):
+    if "what time is it" in said:
+        say(time.strftime("%I%M:%p"))
+
+    if "date" in said:
+        say(datetime.datetime.now().strftime("%m-%d-%Y"))
+
+    if 'today' in said:
+        say("today is " + datetime.datetime.now().strftime("%A"))
+
+    if 'what can you do' in said:
+        say("just say the following commands: ")
+        print("Assistant: Just say the following commands:")
+        print("\t1. choose / change to: [david, friday]")
+        print("\t2. who are you")
+        print("\t3. what is today / what day is today")
+        print("\t4. what's the date today")
+        print("\t5. search in google / youtube")
+        print("\t6. find location / find the location")
+        print("\t7. open (an application)")
+        print("\t8. check weather")
+        print("\t9. wolframalpha computations")
+        print("\t10. control sounds, etc.")
+        print("\t11. say goodbye")
+
+
+#function to search inputs on google
+def search_google(said):
+    if "google" in said:
+        indx = said.lower().split().index('google')
+        query = said.split()[indx + 1:]
+        url = "http://google.com/search?q=" + "+".join(query)
+        webbrowser.get(brave_path).open_new(url)
+        say("here is what I found on " + str(query))
        
 
 #main function that contains the commands of other functions
@@ -128,6 +183,9 @@ def main():
     add_commands(said)
     get_db_result(said)
     quit(said)
+    snr(said)
+    do_commands(said)
+    search_google(said)
 
 if __name__ == "__main__":
     greet()
