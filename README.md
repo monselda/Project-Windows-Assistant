@@ -30,9 +30,14 @@ Written by:
 • 
 
 Scope
-
-Definitions, Acronyms, and Abbreviations
-•
+  
+  • For the creation of the application: The project only includes VsCode, python interpreter, anaconda, MySQL  
+  • For the user: This software can be used by all for their personal use. It can only be utilized with its functions within the computer. It also does not gather the user's personal information.  
+  
+Definitions, Acronyms, and Abbreviations  
+•Google Calendar API  
+•Wolfram Alpha  
+•Open Weather API  
 
 Reference
 
