@@ -3,6 +3,21 @@ import os
 import time
 import pyttsx3  #pip install pyttsx3==2.71
 import speech_recognition as sr
+import mysql.connector
+from main_mysql_cred import *
+
+
+#mysql connector and cursor
+mydb = mysql.connector.connect(
+	host=host, 
+	user=user, 
+	password=passwd, 
+    database=database,
+	# Important!!!
+	auth_plugin='mysql_native_password'
+	# Important!!!
+    )
+mycursor = mydb.cursor(buffered=True)
 
 
 #setting text to speech engine and voice rate property
@@ -66,11 +81,53 @@ def nircmd(said):
 
     if 'stand by' in said:
         os.system("C:/nircmd.exe standby")
+
+
+#function for closing the program
+def quit(said):
+    if "goodbye" in said:
+        say("okay, goodbye.")
+        exit()
+
+
+#function to add commands and store it in MySQL database
+def add_commands(said):
+    if "add command" in said:
+        say("please add your command")
+        command = input("Enter your command: ")
+        response = input("Enter the response for your command: ")
+        try:
+            mycursor.execute("""INSERT INTO commands(command, response) VALUES(%s, %s)""", (command, response))
+            say("done")
+            mydb.commit()
+        finally:
+
+            mydb.close()
+
+
+#fetch the database and check if there's a result from query
+def get_db_result(said):
+    data = said
+    try:
+        mycursor.execute("SELECT response FROM commands WHERE command='%s'" % (data))
+        row = mycursor.fetchone()[0]
+        mydb.commit()
+        say(row)
+    except:
+        print("Assistant: Error! No data found in the database.")
+    finally:
+        mydb.close
+
+
+
        
 
 #main function that contains the commands of other functions
 def main():
     nircmd(said)
+    add_commands(said)
+    get_db_result(said)
+    quit(said)
 
 if __name__ == "__main__":
     greet()
