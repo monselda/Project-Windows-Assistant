@@ -2,11 +2,13 @@ import datetime
 import os
 import time
 import webbrowser
+import wolframalpha
+import requests
 import pyttsx3  #pip install pyttsx3==2.71
 import speech_recognition as sr
 import mysql.connector
 from main_mysql_cred import *
-
+from API import weather_api, app_id
 
 #mysql connector and cursor
 mydb = mysql.connector.connect(
@@ -154,7 +156,7 @@ def do_commands(said):
     if 'what can you do' in said:
         say("just say the following commands: ")
         print("Assistant: Just say the following commands:")
-        print("\t1. choose / change to: [david, friday]")
+        print("\t1. choose / change to: [david, ashi]")
         print("\t2. who are you")
         print("\t3. what is today / what day is today")
         print("\t4. what's the date today")
@@ -162,9 +164,11 @@ def do_commands(said):
         print("\t6. find location / find the location")
         print("\t7. open (an application)")
         print("\t8. check weather")
-        print("\t9. wolframalpha computations")
-        print("\t10. control sounds, etc.")
-        print("\t11. say goodbye")
+        print("\t9. wolfram -> query")
+        print("\t10. control sounds, standby")
+        print("\t11. shutdown and restart computer ---> cancel to CANCEL")
+        print("\t12. write mode --> for nonverbal interaction")
+        print("\t13. say goodbye")
 
 
 #function to search inputs on google
@@ -175,6 +179,70 @@ def search_google(said):
         url = "http://google.com/search?q=" + "+".join(query)
         webbrowser.get(brave_path).open_new(url)
         say("here is what I found on " + str(query))
+
+
+#function to search videos on youtube
+def search_youtube(said):
+    if 'youtube' in said.lower():
+        say("Opening in youtube")
+        indx = said.lower().split().index('youtube')
+        query = said.split()[indx + 1:]
+        url = "https://www.youtube.com/results?search_query=" + "+".join(query)
+        webbrowser.get(brave_path).open_new(url)
+        say("here is what I found on " + str(query))
+
+
+#function to search location
+def search_location(said):
+    if "find location of" in said or "find the location of" in said:
+        indx = said.lower().split().index('of')
+        query = said.split()[indx + 1:]
+        url = "http://google.com/maps/place/" + "+".join(query) + "/&amp"
+        webbrowser.get(brave_path).open_new(url)
+        say("here is the location of " + str(query))
+
+
+#function to check the weather
+def weather_check(said):
+    if "weather" in said:
+        try:
+            search = said.replace("check the weather in ", "").replace("can you check the weather in ", "").replace(
+                "what's the weather in ", "").replace("check weather in ", "")
+            url = 'https://api.openweathermap.org/data/2.5/weather?q=' + search + '&appid=' + weather_api #your API
+            print("Assistant: " + url)
+            loc_url = 'https://openweathermap.org/find?q=' + search
+            webbrowser.get(brave_path).open_new(loc_url)
+            json_data = requests.get(url).json()
+            weather_type = json_data['weather'][0]['main']
+            if weather_type == "Clouds":
+                weather_type = "cloudy"
+            elif weather_type == "Haze":
+                weather_type = "hazy"
+            elif weather_type == "Snow":
+                weather_type = "snowy"
+            elif weather_type == "Rain":
+                weather_type = "rainy"
+            temp = json_data['main']['temp']
+            temp = round(temp - 273.15)
+            temp = str(temp) + " degree celcius"
+            say(
+                "the weather in " + search + " is " + weather_type + ". " + "And the temperature is " + temp)
+        except sr.UnknownValueError:
+            say("Sorry, I can't understand you. ")
+
+
+#function to solve math problems
+def wolfram(said):
+    if "wolfram" in said:
+        data = get_audio()
+        client = wolframalpha.Client(app_id) #your own app ID
+        res = client.query(data)
+        try:
+            output = next(res.results).text
+            print("Assistant: " + str(output))
+            say("The answer is," + str(output))
+        except:
+            say("Sorry, I dont have an answer for that")
        
 
 #main function that contains the commands of other functions
@@ -186,6 +254,10 @@ def main():
     snr(said)
     do_commands(said)
     search_google(said)
+    search_location(said)
+    search_youtube(said)
+    weather_check(said)
+    wolfram(said)
 
 if __name__ == "__main__":
     greet()
