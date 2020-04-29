@@ -29,11 +29,11 @@ Written by:
 # Purpose  
 • To help organize calendar reminders    
 • To aid opening and managing applications in the computer  
-• To give access to computer's miscellaneous just by speaking or writing
+• To give access to computer's miscellaneous just by speaking or writing  
 • Gain access on wolfram 
-• Check weather on different places based on the user's query
-• search something on the internet like google and youtube
-• Allows the user to add and get data from database
+• Check weather on different places based on the user's query  
+• search something on the internet like google and youtube  
+• Allows the user to add and get data from database  
 
 **Scope**
   
