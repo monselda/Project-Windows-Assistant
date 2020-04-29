@@ -2,12 +2,12 @@
 Project for CPE106L - B3
 
 **Project Members**  
-  1.  
-  2.  
-  3.  
-  4.  
-  5.  
-  6.  
+  1.  Capunod, John Cedric
+  2.  Dionisio, Gela
+  3.  Montecillo, Carl Lemuel
+  4.  Nerpio, Rayden Vincent
+  5.  Selda, Jose Mari
+  6.  Tapado, Edward Hannes
 
 **Requirements**  
 • Python 3.7  
@@ -54,7 +54,10 @@ Written by:
 **Actors**  
     • Users - The users are the beneficiaries of the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, (3) Write and read in notepad. 
 List of Use Case  
-
+    • Software Developer -  
+  
+# List of Use Cases #  
+  
 **Use Case Diagram**  
 
 **Use Cases**  
@@ -65,8 +68,13 @@ List of Use Case
 
 **System Architecture**
 
-**System Interfaces**
+# System Interfaces #   
+• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
+• Software Interfaces -  
+# Constraints and Assumptions #  
+• **List Assumptions**  
+• **List of Dependencies**  
 
-**Constraints and Assumptions**
-
-# System Object Model
+# System Object Model #  
+</br>
+[OneDrive Link](https://bit.ly/35gF1QP)
