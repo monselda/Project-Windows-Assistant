@@ -62,6 +62,9 @@ Written by:
     - Display Data 
       - Results from queries are shown in the command prompt
       - Online Results can be viewed in browser opened by the program based on user's queries
+    - Calendar Reminders
+      - Set reminders on google calendar
+      - Alert user for upcoming calendar reminders
   
 **Use Case Diagram**  
 
