@@ -51,7 +51,7 @@ Written by:
   
 # Use Cases #  
 
-### Actors  
+**Actors**  
     • Users - The users are the beneficiaries of the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, (3) Write and read in notepad. 
  
     • Software Developer -  
