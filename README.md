@@ -77,4 +77,4 @@ List of Use Case
 
 # System Object Model #  
 </br>  
-Link to [ OneDrive ] (https://mymailmapuaedu-my.sharepoint.com/:f:/g/personal/jmsselda_mymail_mapua_edu_ph/ErKSxUubpJFAtdOAdqP0kNABfcv7HoCh0b_0LUV3QEUgQA?e=09i9T7)
+
