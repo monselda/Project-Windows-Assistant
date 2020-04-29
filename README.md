@@ -3,10 +3,10 @@ Project for CPE106L - B3
 
 **Project Members**  
   1.  Capunod, John Cedric
-  2.  Dionisio, Gela
-  3.  Montecillo, Carl Lemuel
-  4.  Nerpio, Rayden Vincent
-  5.  Selda, Jose Mari
+  2.  Dionisio, Maria Annegela C.
+  3.  Montecillo, Carl Lemuel Z.
+  4.  Nerpio, Rayden Vincent M. 
+  5.  Selda, Jose Mari S.
   6.  Tapado, Edward Hannes
 
 **Requirements**  
