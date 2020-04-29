@@ -51,12 +51,18 @@ Written by:
   
 # Use Cases #  
 
-**Actors**  
+### Actors  
     • Users - The users are the beneficiaries of the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, (3) Write and read in notepad. 
-List of Use Case  
+ 
     • Software Developer -  
   
 # List of Use Cases #  
+  - User Use Cases
+    - Display Status (Overview)
+      - Command prompt user interface
+    - Display Data 
+      - Results from queries are shown in the command prompt
+      - Online Results can be viewed in browser opened by the program based on user's queries
   
 **Use Case Diagram**  
 
