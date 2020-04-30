@@ -97,7 +97,10 @@ class Ui_MainWindow(object):
     def listen(self):
         said = m.get_audio()
         self.user_display.append("User: " + said)
-        m.main(said)
+        if "add command" in said:
+            self.otherwindow()
+        else:
+            m.main(said)
 
 
     def changeContent(self):
@@ -110,35 +113,7 @@ class Ui_MainWindow(object):
             
         else:
             m.main_write(userInput)
-            
-
-''' def add_command(self):
-        m.say("please add your command")
-        #self.user_input.placeholderText("PLEASE ADD YOUR COMMAND.")
-        command = self.user_input.returnPressed.connect(self.add_response)
-    
-        return command  
-
-    def add_response(self, command):
-        m.say("please add your Response")
-        #self.user_input.placeholderText("PLEASE ADD YOUR COMMAND.")
-        response = self.user_input.returnPressed.connect(self.db)
-
-        return response, command
-        
-
-    def db(self, command, response):
-        try:
-            mycursor.execute("""INSERT INTO commands(command, response) VALUES(%s, %s)""", (command, response))
-            m.say("done")
-            mydb.commit()
-        finally:
-            mydb.close()'''
-
-
-    
-
-        
+ 
 
 if __name__ == "__main__":
     import sys
