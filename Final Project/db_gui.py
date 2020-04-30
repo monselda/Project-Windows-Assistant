@@ -8,7 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from main_mysql_cred import host, user, passwd, database
+from main_API import host, user, passwd, database
 import mysql.connector
 
 
