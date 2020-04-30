@@ -404,7 +404,7 @@ def search_location(said):
 def open_application(said):
     if "chrome" in said:
         say("opening Google Chrome")
-        os.startfile('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')
+        os.startfile('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe')
         
     elif "brave" in said:
         say("opening brave browser")
@@ -426,20 +426,6 @@ def open_application(said):
         say("sorry, that application is not installed in the system. or I wasn't programmed to open "
               "that application")
         
-
-'''#function to add commands and store it in MySQL database
-def add_commands(said):
-    if "add command" in said:
-        say("please add your command")
-        command = input("Enter your command: ")
-        response = input("Enter the response for your command: ")
-        try:
-            mycursor.execute("""INSERT INTO commands(command, response) VALUES(%s, %s)""", (command, response))
-            say("done")
-            mydb.commit()
-        finally:
-            mydb.close()
-'''
 
 
 #fetch the database and check if there's a result from query
@@ -470,7 +456,6 @@ def main(said):
     search_google(said)
     search_location(said)
     search_youtube(said)
-    #add_commands(said)
     get_db_result(said)
     date = get_date(said)
     get_reminder(date, service, said)
@@ -495,7 +480,6 @@ def main_write(said):
     search_google(said)
     search_location(said)
     search_youtube(said)
-   #add_commands(said)
     get_db_result(said)
     date = get_date(said)
     get_reminder(date, service, said)
