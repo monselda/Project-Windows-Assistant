@@ -1,6 +1,8 @@
 # Project AI: ASHI&DAVID
-Project for CPE106L - B3
+Project for CPE106L - B3  
+  
 
+  
 **Project Members**  
   1.  Capuno, John Cedric
   2.  Dionisio, Maria Annegela C.
@@ -18,7 +20,9 @@ Project for CPE106L - B3
 
 **Running the Program**  
 1. Install all requirements
-2. Run in terminal 'python main.py'
+2. Run in terminal 'python main.py'  
+
+# [USER MANUAL](https://bit.ly/3f8Yuav)
 
 # Project Documentation
 Written by:
