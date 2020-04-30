@@ -20,9 +20,11 @@ import wolframalpha
 import inspect
 import pyttsx3  #pip install pyttsx3==2.71
 import speech_recognition as sr
+from API import app_id, weather_api
 import pytz
+from main_mysql_cred import host, user, passwd, database
 import mysql.connector
-from main_API import *
+
 
 try:
     #mysql connector and cursor
@@ -37,7 +39,8 @@ try:
         )
     mycursor = mydb.cursor(buffered=True)
 except:
-    print("Please connect your MySQL credentials.")
+    print("Please add your credentials to main_mysql_cred.")
+
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
@@ -59,7 +62,9 @@ brave_path_normal = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Applicat
 
 #function for synthesizer
 def say(text):
+
     print("Assistant: " + text)
+
     engine.say(text)
     engine.runAndWait()
 
@@ -162,6 +167,7 @@ def notepad(said):
         with open(my_file,"r") as f:
             data = f.readlines()
             say(str(data))
+
 
 #function to get google calendar account
 def authenticate_user():
@@ -325,9 +331,9 @@ def weather_check(said):
 #function to solve math problems
 def wolfram(said):
     if "wolfram" in said:
-        data = get_audio()
+        said = said.replace("wolfram ", "").replace("wolfram, ", "")
         client = wolframalpha.Client(app_id) #your own app ID
-        res = client.query(data)
+        res = client.query(said)
         try:
             output = next(res.results).text
             print("Assistant: " + str(output))
@@ -421,8 +427,7 @@ def open_application(said):
               "that application")
         
 
-
-#function to add commands and store it in MySQL database
+'''#function to add commands and store it in MySQL database
 def add_commands(said):
     if "add command" in said:
         say("please add your command")
@@ -433,8 +438,8 @@ def add_commands(said):
             say("done")
             mydb.commit()
         finally:
-
             mydb.close()
+'''
 
 
 #fetch the database and check if there's a result from query
@@ -452,7 +457,9 @@ def get_db_result(said):
 
 
 #main function that contains the commands of other functions
-def main():
+def main(said):
+    service = authenticate_user()
+    print("Assistant: Listening...")
     choose_voice(said)
     notepad(said)
     nircmd(said)
@@ -463,32 +470,39 @@ def main():
     search_google(said)
     search_location(said)
     search_youtube(said)
-    add_commands(said)
+    #add_commands(said)
     get_db_result(said)
+    date = get_date(said)
+    get_reminder(date, service, said)
     quit(said)
 
+    if "open" in said:
+        open_application(said)
+
+    if "write mode" in said:
+        say("write mode activated.")
 
 
-
-if __name__ == "__main__":
-    
-    while True:
-        service = authenticate_user()
-        print("Assistant: Listening...")
-        said = get_audio()
+def main_write(said):
+    service = authenticate_user()
+    choose_voice(said)
+    notepad(said)
+    nircmd(said)
+    wolfram(said)
+    weather_check(said)
+    snr(said)
+    do_commands(said)
+    search_google(said)
+    search_location(said)
+    search_youtube(said)
+   #add_commands(said)
+    get_db_result(said)
+    date = get_date(said)
+    get_reminder(date, service, said)
+    quit(said)
         
-        
-        date = get_date(said)
-        get_reminder(date, service, said)
-        
+    if "open" in said:
+        open_application(said)
 
-        if "write mode" in said:
-            say("write mode activated.")
-            while True:
-                data = input(">> ")
-                said = data.lower()
-                if data == "deactivate":
-                    break
-                else:
-                    date = get_date(said)
-                    get_reminder(date, service, said)
+
+greet()
