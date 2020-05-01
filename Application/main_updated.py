@@ -20,8 +20,9 @@ import wolframalpha
 import inspect
 import pyttsx3  #pip install pyttsx3==2.71
 import speech_recognition as sr
+from API import app_id, weather_api
 import pytz
-from main_API import host, user, passwd, database, weather_api, app_id
+from main_mysql_cred import host, user, passwd, database
 import mysql.connector
 
 
@@ -123,27 +124,42 @@ def quit(said):
 
 #function for controlling laptop's brightness, monitor, volume.
 def nircmd(said):
-    if 'increase volume' in said or 'volume up' in said:
-        os.system("C:/nircmd.exe changesysvolume 5000")
-        say("volume increased")
+    try:
+        if 'increase volume' in said or 'volume up' in said:
+            f = open("C:/nircmd.exe")
+            f.close()
+            os.system("C:/nircmd.exe changesysvolume 5000")
+            say("volume increased")
 
-    if 'decrease volume' in said or 'volume down' in said:
-        os.system("C:/nircmd.exe changesysvolume -5000")
-        say("volume decreased")
+        if 'decrease volume' in said or 'volume down' in said:
+            f = open("C:/nircmd.exe")
+            f.close()
+            os.system("C:/nircmd.exe changesysvolume -5000")
+            say("volume decreased")
 
-    if 'max volume' in said:
-        os.system("C:/nircmd.exe setsysvolume 65535")
-        say("max volume") 
+        if 'max volume' in said:
+            f = open("C:/nircmd.exe")
+            f.close()
+            os.system("C:/nircmd.exe setsysvolume 65535")
+            say("max volume") 
 
-    if 'mute' in said:
-        os.system("C:/nircmd.exe mutesysvolume 1")
+        if 'mute' in said:
+            f = open("C:/nircmd.exe")
+            f.close()
+            os.system("C:/nircmd.exe mutesysvolume 1")
 
-    if 'unmute' in said:
-        os.system("C:/nircmd.exe mutesysvolume 0")
-        say("volume unmuted")
+        if 'unmute' in said:
+            f = open("C:/nircmd.exe")
+            f.close()
+            os.system("C:/nircmd.exe mutesysvolume 0")
+            say("volume unmuted")
 
-    if 'stand by' in said:
-        os.system("C:/nircmd.exe standby")
+        if 'stand by' in said:
+            f = open("C:/nircmd.exe")
+            f.close()
+            os.system("C:/nircmd.exe standby")
+    except:
+        say("Please install nircmd to use this command")
 
 
 
@@ -303,26 +319,34 @@ def weather_check(said):
     if "weather" in said:
         try:
             search = said.replace("check the weather in ", "").replace("can you check the weather in ", "").replace(
-                "what's the weather in ", "").replace("check weather in ", "")
+                "what's the weather in ", "").replace("check weather in ", "").replace("weather in ", "")
+            
             url = 'https://api.openweathermap.org/data/2.5/weather?q=' + search + '&appid=' + weather_api #your API
-            print("Assistant: " + url)
-            loc_url = 'https://openweathermap.org/find?q=' + search
-            webbrowser.get(brave_path).open_new(loc_url)
-            json_data = requests.get(url).json()
-            weather_type = json_data['weather'][0]['main']
-            if weather_type == "Clouds":
-                weather_type = "cloudy"
-            elif weather_type == "Haze":
-                weather_type = "hazy"
-            elif weather_type == "Snow":
-                weather_type = "snowy"
-            elif weather_type == "Rain":
-                weather_type = "rainy"
-            temp = json_data['main']['temp']
-            temp = round(temp - 273.15)
-            temp = str(temp) + " degree celcius"
-            say(
-                "the weather in " + search + " is " + weather_type + ". " + "And the temperature is " + temp)
+        
+            if weather_api != '':
+                loc_url = 'https://openweathermap.org/find?q=' + search
+                webbrowser.get(brave_path).open_new(loc_url)
+            else:
+                pass
+            try:
+                json_data = requests.get(url).json()
+                weather_type = json_data['weather'][0]['main']
+            
+                if weather_type == "Clouds":
+                    weather_type = "cloudy"
+                elif weather_type == "Haze":
+                    weather_type = "hazy"
+                elif weather_type == "Snow":
+                    weather_type = "snowy"
+                elif weather_type == "Rain":
+                    weather_type = "rainy"
+                temp = json_data['main']['temp']
+                temp = round(temp - 273.15)
+                temp = str(temp) + " degree celcius"
+                say(
+                    "the weather in " + search + " is " + weather_type + ". " + "And the temperature is " + temp)
+            except:
+                say("Error! weather api is missing")
         except sr.UnknownValueError:
             say("Sorry, I can't understand you. ")
 
@@ -331,14 +355,21 @@ def weather_check(said):
 def wolfram(said):
     if "wolfram" in said:
         said = said.replace("wolfram ", "").replace("wolfram, ", "")
-        client = wolframalpha.Client(app_id) #your own app ID
-        res = client.query(said)
         try:
+            try:
+                client = wolframalpha.Client(app_id) #your own app ID
+                res = client.query(said)
+            except:
+                say("Wolfram app id is missing")
+        
             output = next(res.results).text
             print("Assistant: " + str(output))
-            say("The answer is," + str(output))
+            say("The answer is " + str(output))
         except:
-            say("Sorry, I dont have an answer for that")
+            if app_id != '':
+                say("Sorry, I dont have an answer for that")
+            else:
+                pass
 
 
 #function to ask AI
