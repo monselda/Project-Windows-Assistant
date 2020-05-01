@@ -52,23 +52,25 @@ Written by:
 **Reference**  
   
 **Overview**  
-  
+  The students created a program that utilizes speech recognition to create an assistant for daily use. The students used the knowledge they obtained in their Software Design Course, and created a project that helps the user to make some tasks easier. The program reacts to sound and does tasks whenever hearing sound that has a corresponding function.
 # Use Cases #  
 
 **Actors**  
-    • Users - The users are the beneficiaries of the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, (3) Write and read in notepad.  
-    • Software Developer -  
+    • Customer Users - The customers are users who are beneficiaries of the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, (3) Write and read in notepad.   
+    • Software Developer -  The software developers created the program using AI, or Artificial Intelligence, that recognizes speech that has functions linked to it. They are in charge of the which applications will have functions linked to them, and the database management. 
   
 # List of Use Cases #  
   - User Use Cases
     - Display Status (Overview)
-      - Command prompt user interface
+      - The user wants to see the overview of the program, thus the application will show a Command prompt user interface.
     - Display Data 
-      - Results from queries are shown in the command prompt
-      - Online Results can be viewed in browser opened by the program based on user's queries
+      - The user wants to search in the web, then the application will show results from queries that will be shown in the command prompt. 
+      - If it is an online query, the default browser will be launched and the online results will be shown.
     - Calendar Reminders
-      - Set reminders on google calendar
-      - Alert user for upcoming calendar reminders
+      - If the user wants to create calendar reminders, the application will set reminders on Google Calendar. 
+      - The user will also be given notifications about upcoming reminders in the Google Calendar.
+    - Questions
+      - If the user asks a question, the application will return an answer from the Wolfram's cloud.
   
 **Use Case Diagram**  
 
