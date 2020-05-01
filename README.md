@@ -70,7 +70,7 @@ Written by:
       - If the user wants to create calendar reminders, the application will set reminders on Google Calendar. 
       - The user will also be given notifications about upcoming reminders in the Google Calendar.
     - Questions
-      - If the user asks a question, the application will return an answer from the Wolfram's cloud.
+      - If the user asks a question, the application will return an answer from Wolfram's cloud.
   
 **Use Case Diagram**  
 
