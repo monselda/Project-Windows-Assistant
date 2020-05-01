@@ -22,7 +22,7 @@ import pyttsx3  #pip install pyttsx3==2.71
 import speech_recognition as sr
 from API import app_id, weather_api
 import pytz
-from main_mysql_cred import host, user, passwd, database
+from main_API import host, user, passwd, database, weather_api, app_id
 import mysql.connector
 
 
