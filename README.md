@@ -72,10 +72,19 @@ Written by:
     - Questions
       - If the user asks a question, the application will return an answer from Wolfram's cloud.
   
-**Use Case Diagram**  
+## [Use Case Diagram](https://mymailmapuaedu-my.sharepoint.com/:i:/g/personal/etapado_mymail_mapua_edu_ph/EZFgzrJYj39Fqg-DOBc3icoBbtX4C912Nm1-XUPrqL06bQ?e=m9TvNb)  
 
 **Use Cases**  
-
+  - **Brief Description:**  
+      - This use case describes the main interface of the software application. It shows the flow of the program from when the user starts to run and it and starts asking some queries. The dynamic queries such as the temperature of a certain place or asking to solve some mathematical equations, the API will take over and handle the queries of the user. The user can access the database by saying or writing the *add command*. After all the queries of the user has been handled, the terminal will show the answer on the user's query.  
+  - **Goal:**  
+      - To provide answers to the user's queries.  
+  - **Trigger:**  
+      - The user has two options for the program. They can either speak their query or they can type their query.
+  - **Typical Flow of Events:**  
+      1. A window is generated and another window will be generated once *add command* is entered.
+      2. The data is pulled from database and websites using API.
+      3. The user views the answer on their queries on the terminal.
 # Design Overview
 
 **Introduction**
@@ -83,7 +92,7 @@ Written by:
 **System Architecture**
 
 # System Interfaces #   
-• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
+• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder. 
 • Software Interfaces -  
 # Constraints and Assumptions #  
 • **List Assumptions**  
