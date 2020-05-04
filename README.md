@@ -1,15 +1,19 @@
 # Project AI: ASHI&DAVID
 Project for CPE106L - B3  
   
-
+<p align="center">
+  <img width="max" height="max" src="/Imgs/project_ai.png">
+</p>
   
-**Project Members**  
-  1.  Capuno, John Cedric
-  2.  Dionisio, Maria Annegela C.
-  3.  Montecillo, Carl Lemuel Z.
-  4.  Nerpio, Rayden Vincent M. 
-  5.  Selda, Jose Mari S.
-  6.  Tapado, Edward Hannes
+ | Project Members | Position |
+| --- | :---: |
+| Capuno, John Cedric | Backend |
+| Dionisio, Maria Annegela C. | Backend | 
+| Montecillo, Carl Lemuel Z. | Backend |
+| Nerpio, Rayden Vincent M. | Backend |
+| Selda, Jose Mari S. | Backend |
+| Tapado, Edward Hannes M. | Full Stack |
+ 
 
 **Requirements**  
 • Python 3.7  
@@ -26,7 +30,10 @@ Project for CPE106L - B3
 # [USER MANUAL](https://bit.ly/3f8Yuav)
 
 # Project Documentation
-Written by:
+Written by:  
+• Capuno, John Cedric  
+• Selda, Jose Mari S.  
+• Tapado, Edward Hannes M.  
 
 # Introduction
   With the advancements and breakthroughs made in technology in the current generation, AI or Artificial Intelligence is widely being utilized to aid humans in further towards improving the lives of individuals through technology. Creating a machine with AI nowadays have several purposes, some AIs are industrial purposes like creating machines with the aid of AIs to make it adapt to certain environments, an example of this is Curiosity - the rover that was sent to Mars to explore the crater Gale. Next, some are utilized for human services, like Alexa, she can help with searching for information in the net without typing, set reminder all with Voice Recognition. For this project the group of students have created a simple AI that can help users with some basic necessities while using their pesonal computers.  
@@ -50,8 +57,7 @@ Written by:
 • **Wolfram Alpha**  - This API returns an answer based on the query of the user. You can get answer based on these topics (Math, Science, Social, Culture, and Everyday Life).  
 • **Open Weather API** - This API gives you access to their weather monitoring system.  
 
-**Reference**  
-  
+
 **Overview**  
   The students created a program that utilizes speech recognition to create an assistant for daily use. The students used the knowledge they obtained in their Software Design Course, and created a project that helps the user to make some tasks easier. The program reacts to sound and does tasks whenever hearing sound that has a corresponding function.
 # Use Cases #  
