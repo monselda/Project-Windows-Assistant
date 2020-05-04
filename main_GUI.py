@@ -93,6 +93,7 @@ class Ui_MainWindow(object):
 
 
     def listen(self):
+        print("Assistant: Listening...")
         said = get_audio()
         self.user_display.append("User: " + said)
         if "add command" in said:
