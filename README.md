@@ -4,7 +4,9 @@ Project for CPE106L - B3
 <p align="center">
   <img width="max" height="max" src="/Imgs/project_ai.png">
 </p>
-  
+ 
+<br />
+
  | Project Members | Position |
 | --- | :---: |
 | Capuno, John Cedric | Backend |
@@ -14,14 +16,12 @@ Project for CPE106L - B3
 | Selda, Jose Mari S. | Backend |
 | Tapado, Edward Hannes M. | Full Stack |
  
+<br />
 
 **Requirements**  
-• Python 3.7  
-• MySQL  
-• Google Calendar Api  
-• WolframAlpha API  
-• OpenWeather API  
+• [requirements.txt](requirements.txt)  
 • [Nircmd](https://www.nirsoft.net/utils/nircmd.html)  
+
 
 **Running the Program**  
 1. Install all requirements
@@ -102,7 +102,7 @@ In this section we will discuss the design overview of the application. The appl
 
 # Constraints and Assumptions #  
 • **List Assumptions** 
-    - It assumed that the database is in MySQL format.
+    - It assumed that the database is in MySQL format.  
 • **List of Dependencies**  
     - The application does requires python 3.7 to run. All modules will be included in the requirements.txt.  
 
