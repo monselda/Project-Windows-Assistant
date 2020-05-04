@@ -475,7 +475,6 @@ def get_db_result(said):
 #main function that contains the commands of other functions
 def main(said):
     service = authenticate_user()
-    print("Assistant: Listening...")
     choose_voice(said)
     notepad(said)
     nircmd(said)
