@@ -16,7 +16,8 @@ Project for CPE106L - B3
 • MySQL  
 • Google Calendar Api  
 • WolframAlpha API  
-• OpenWeather API
+• OpenWeather API  
+• [Nircmd](https://www.nirsoft.net/utils/nircmd.html)  
 
 **Running the Program**  
 1. Install all requirements
