@@ -101,7 +101,7 @@ In this section we will discuss the design overview of the application. The appl
 • User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
 
 # Constraints and Assumptions #  
-• **List Assumptions** 
+• **List Assumptions**  
     - It assumed that the database is in MySQL format.  
 • **List of Dependencies**  
     - The application does requires python 3.7 to run. All modules will be included in the requirements.txt.  
