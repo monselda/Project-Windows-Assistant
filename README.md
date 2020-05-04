@@ -88,16 +88,16 @@ Written by:
 # Design Overview
 
 **Introduction**
-
-**System Architecture**
+In this section we will discuss the design overview of the application. The application will have a graphical user interface (GUI), interaction, database, API, synthesizer, recognizer, and google calendar authenticator. The main control of the application will be the GUI where user can input their queries via typing or speaking. The user's queries can be answered by hard-coded answers or by APIs. The user can also add some commands and response to the database.  
 
 # System Interfaces #   
-• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder. 
-• Software Interfaces -  
-# Constraints and Assumptions #  
-• **List Assumptions**  
-• **List of Dependencies**  
+• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
 
-# System Object Model #  
+# Constraints and Assumptions #  
+• **List Assumptions** 
+    - It assumed that the database is in MySQL format.
+• **List of Dependencies**  
+    - The application does requires python 3.7 to run. All modules will be included in the requirements.txt.  
+
 </br>  
 
