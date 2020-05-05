@@ -176,7 +176,7 @@ def notepad(said):
         file.close()
         say("done")
     
-    if "open text" in said:
+    if "show text" in said:
         say("opening notepad")
         os.startfile(my_file)
         with open(my_file,"r") as f:
@@ -386,17 +386,26 @@ def do_commands(said):
     if 'what can you do' in said:
         say("just say the following commands: ")
         print("Assistant: Just say the following commands:")
-        print("\t1. choose / change to: [david, friday]")
+        print("\t1. choose / change to: [david, ashi]")
         print("\t2. who are you")
-        print("\t3. what is today / what day is today")
-        print("\t4. what's the date today")
+        print("\t3. what is today / what day is today / what's the date today")
+        print("\t4. shutdown computer/ restart computer. CANCEL to cancel.")
         print("\t5. search in google / youtube")
-        print("\t6. find location / find the location")
-        print("\t7. open (an application)")
-        print("\t8. check weather")
-        print("\t9. wolframalpha computations")
-        print("\t10. control sounds, etc.")
-        print("\t11. say goodbye")
+        print("\t6. find location of / find the location of")
+        print("\t7. open (chrome,  brave, garena, word, powerpoint, notepad, calculator)")
+        print("\t8. check the weather in / can you check the weather in / what's the weather in / check weather in / weather in")
+        print("\t9. wolfram, 'query' ")
+        print("\t10. increase volume / volume up")
+        print("\t11. decrease volume / volume down")
+        print("\t12. max volume")
+        print("\t13. mute")
+        print("\t14. ummute")
+        print("\t15. standby")
+        print("\t16. paste in notepad / show text")
+        print("\t17. what do i have .. / reminders .. / schedule ..")
+        print("\t18. add command ")
+        print("\t19. close {app name}")
+        print("\t20. say goodbye")
 
 
 #function to search inputs on google
@@ -451,10 +460,29 @@ def open_application(said):
     elif "powerpoint" in said:
         say("opening powerpoint")
         os.startfile("C:/Program Files (x86)/Microsoft Office/root/Office16/POWERPNT.EXE")
+    
+    elif "notepad" in said:
+        say("opening notepad")
+        os.startfile("notepad")
+
+    elif "calculator" in said:
+        say("opening calculator")
+        os.startfile("calculator")
         
     else:
         say("sorry, that application is not installed in the system. or I wasn't programmed to open "
               "that application")
+
+
+#function to close an application
+def close_app(said):
+    data = said.replace("close ", "")
+    try:
+        os.system(f"TASKKILL /F /IM {data}.exe")
+        say(f"closing {data}")
+    
+    except:
+        say(f"sorry, {data} is not running.")
         
 
 
@@ -496,6 +524,9 @@ def main(said):
     if "write mode" in said:
         say("write mode activated.")
 
+    if "close" in said:
+        close_app(said)
+
 
 def main_write(said):
     service = authenticate_user()
@@ -516,6 +547,9 @@ def main_write(said):
         
     if "open" in said:
         open_application(said)
+
+    if "close" in said:
+        close_app(said)
 
 
 greet()
