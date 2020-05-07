@@ -36,7 +36,7 @@ Written by:
 • Tapado, Edward Hannes M.  
 
 # Introduction
-  With the advancements and breakthroughs made in technology in the current generation, AI or Artificial Intelligence is widely being utilized to aid humans in further towards improving the lives of individuals through technology. Creating a machine with AI nowadays have several purposes, some AIs are industrial purposes like creating machines with the aid of AIs to make it adapt to certain environments, an example of this is Curiosity - the rover that was sent to Mars to explore the crater Gale. Next, some are utilized for human services, like Alexa, she can help with searching for information in the net without typing, set reminder all with Voice Recognition. For this project the group of students have created a simple AI that can help users with some basic necessities while using their pesonal computers.  
+  With the advancements and breakthroughs made in technology in the current generation, AI or Artificial Intelligence is widely being utilized to aid humans towards improving the lives of individuals through technology. Creating a machine with AI nowadays have several purposes, some AIs are used for industrial purposes such as creating machines. With the aid of AIs to make it adapt to certain environments. An example of this is Curiosity - the rover that was sent to Mars to explore the crater Gale. Some other AIs are utilized for human services, like Alexa, she can help with searching for information on the internet without typing. Also can set reminder with using just voice recognition. For this project the group of students have created a simple AI that can help users with some basic necessities while using their pesonal computers.  
   
 # Purpose  
 • To help organize calendar reminders    
@@ -59,7 +59,7 @@ Written by:
 
 
 **Overview**  
-  The students created a program that utilizes speech recognition to create an assistant for daily use. The students used the knowledge they obtained in their Software Design Course, and created a project that helps the user to make some tasks easier. The program reacts to sound and does tasks whenever hearing sound that has a corresponding function.
+  The students created a program that utilizes speech recognition to create an assistant for daily use. The students used the knowledge they obtained from their Software Design Course, and created a project that helps the user to make some tasks easier. The program reacts to sound and does tasks whenever hearing sound that has a corresponding function.
 # Use Cases #  
 
 **Actors**  
@@ -95,10 +95,10 @@ Written by:
 # Design Overview
 
 **Introduction**
-In this section we will discuss the design overview of the application. The application will have a graphical user interface (GUI), interaction, database, API, synthesizer, recognizer, and google calendar authenticator. The main control of the application will be the GUI where user can input their queries via typing or speaking. The user's queries can be answered by hard-coded answers or by APIs. The user can also add some commands and response to the database.  
+In this section we will discuss the design overview of the application. The application will have a graphical user interface (GUI), interaction, database, API, synthesizer, recognizer, and google calendar authenticator. The main control of the application will be the GUI where the user can input their queries via typing or speaking. The user's queries can be answered by hard-coded answers or by APIs. The user can also add some commands and response to the database.  
 
 # System Interfaces #   
-• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
+• User Interface - The program starts with the Windows Assistant greeting the user, then the user can type any command within the applications scope and the application will then will execute it. The user can also use the write mode feature by typing in the program's console or use the voice mode feature by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
 
 # Constraints and Assumptions #  
 • **List Assumptions**  
