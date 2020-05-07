@@ -32,6 +32,7 @@ Project for CPE106L - B3
 # Project Documentation
 Written by:  
 • Capuno, John Cedric  
+• Montecillo, Carl Lemuel Z.
 • Selda, Jose Mari S.  
 • Tapado, Edward Hannes M.  
 
