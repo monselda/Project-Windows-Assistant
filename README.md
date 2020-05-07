@@ -37,7 +37,7 @@ Written by:
 • Tapado, Edward Hannes M.  
 
 # Introduction
-  With the advancements and breakthroughs made in technology in the current generation, AI or Artificial Intelligence is widely being utilized to aid humans in further towards improving the lives of individuals through technology. Creating a machine with AI nowadays have several purposes, some AIs are industrial purposes like creating machines with the aid of AIs to make it adapt to certain environments, an example of this is Curiosity - the rover that was sent to Mars to explore the crater Gale. Next, some are utilized for human services, like Alexa, she can help with searching for information in the net without typing, set reminder all with Voice Recognition. For this project the group of students have created a simple AI that can help users with some basic necessities while using their pesonal computers.  
+  With the advancements and breakthroughs made in technology over the current generation, Artificial Intelligence or AI is widely being utilized to aid humans towards improving the lives of individuals through technology. Creating a machine with AI nowadays have several purposes. Some AIs are used for industrial purposes such as creating machines. With the aid of AIs, they are able to adapt to certain or various environments wherever they are placed. One example is "Curiosity" - the rover that was sent to Mars to explore the crater Gale. Some AIs are utilized for human services, like Alexa or other voice recognition AIs. She can help with searching for information on the internet without typing. You can also set reminders with Voice Recognition. For this project the group of students have created a simple AI that can help users with some basic necessities while using their pesonal computers.  
   
 # Purpose  
 • To help organize calendar reminders    
@@ -60,12 +60,12 @@ Written by:
 
 
 **Overview**  
-  The students created a program that utilizes speech recognition to create an assistant for daily use. The students used the knowledge they obtained in their Software Design Course, and created a project that helps the user to make some tasks easier. The program reacts to sound and does tasks whenever hearing sound that has a corresponding function.
+  The students created a program that utilizes speech recognition to create an assistant for daily use. The students used the knowledge they obtained from their Software Design Course, and created a project that helps users to accomplish tasks easier. The program reacts to sound and does tasks whenever hearing sound that has a corresponding function.
 # Use Cases #  
 
 **Actors**  
-    • Customer Users - The customers are users who are beneficiaries of the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, (3) Write and read in notepad.   
-    • Software Developer -  The software developers created the program using AI, or Artificial Intelligence, that recognizes speech that has functions linked to it. They are in charge of the which applications will have functions linked to them, and the database management. 
+    • Customer Users - The customers are the users that will benefit from the software. They will be able to utilize it for same reasons but can be for different purposes which are: (1) Set reminders via google calendar, (2) Open other applications, and (3) Write and read in notepad.   
+    • Software Developer -  The software developers created the program using AI or Artificial Intelligence that recognizes speech which has functions linked to it. They are in charge of the which applications will have functions linked to them, and the database management. 
   
 # List of Use Cases #  
   - User Use Cases
@@ -84,7 +84,7 @@ Written by:
 
 **Use Cases**  
   - **Brief Description:**  
-      - This use case describes the main interface of the software application. It shows the flow of the program from when the user starts to run and it and starts asking some queries. The dynamic queries such as the temperature of a certain place or asking to solve some mathematical equations, the API will take over and handle the queries of the user. The user can access the database by saying or writing the *add command*. After all the queries of the user has been handled, the terminal will show the answer on the user's query.  
+      - The use case describes the main interface of the software application. It shows the flow of the program from when the user starts to run it and starts asking some queries. The dynamic queries such as the temperature of a certain place or asking to solve some mathematical equations will be taken over by the API and will handle the user's queries. The user can access the database by saying or using the *add command*. After all the queries of the user has been handled, the terminal will show the answer on the user's query.  
   - **Goal:**  
       - To provide answers to the user's queries.  
   - **Trigger:**  
@@ -99,13 +99,13 @@ Written by:
 In this section we will discuss the design overview of the application. The application will have a graphical user interface (GUI), interaction, database, API, synthesizer, recognizer, and google calendar authenticator. The main control of the application will be the GUI where user can input their queries via typing or speaking. The user's queries can be answered by hard-coded answers or by APIs. The user can also add some commands and response to the database.  
 
 # System Interfaces #   
-• User Interface - The program starts with the Windows Assistant greeting the user, then the can type any command within the applications scope and will execute it. The user can also use write mode by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
+• User Interface - The program starts with the Windows Assistant greeting the user. Then they can type any command within the applications scope and will execute it. The user can also use the write mode feature by typing in the program's console or voice mode by talking while the program is listening to execute the user's commands. One feature command is that the user can set a reminder on a date and the program can fetch for the user any time and on the exact day and time of the reminder.  
 
 # Constraints and Assumptions #  
 • **List Assumptions**  
-    - It assumed that the database is in MySQL format.  
+    - It is assumed that the database is in MySQL format.  
 • **List of Dependencies**  
-    - The application does requires python 3.7 to run. All modules will be included in the requirements.txt.  
+    - The application requires python 3.7 to run. All modules will be included in the requirements.txt.  
 
 </br>  
 
